@@ -1,0 +1,45 @@
+### Register User
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "email": "sisi@abv.bg",
+  "password": "password123",
+  "confirmPassword": "password123",
+  "age": 25
+}
+
+### Login User
+POST http://localhost:8080/users/auth
+Content-Type: application/json
+
+{
+  "email": "user@example.com",
+  "password": "password123"
+}
+
+### Get User by ID
+GET http://localhost:8080/users/1
+
+### Get All Users
+GET http://localhost:8080/users
+
+### Create Post
+POST http://localhost:8080/posts
+Content-Type: application/json
+
+{
+  "title": "My First Post",
+  "description": "This is the description of my post.",
+  "owner": 1
+}
+
+### Get User by ID
+GET http://localhost:8080/users/1/posts
+
+
+### Get Post by ID
+GET http://localhost:8080/posts/1
+
+### Get My Posts
+GET http://localhost:8080/users/posts
